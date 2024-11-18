@@ -66,13 +66,13 @@ A simple blog application where users can create, read, and comment on blogs. Th
 
 2. Install frontend dependencies:
     ```bash
-    cd client
+    cd fre+ontend
     npm install
     ```
 
 3. Install backend dependencies:
     ```bash
-    cd server
+    cd backend
     npm install
     ```
 
