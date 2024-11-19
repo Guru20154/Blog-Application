@@ -12,7 +12,7 @@ const Comments = ({ blogId }) => {
   
   const fetchComments = async () => {
     try {
-      const response = await fetchData(`${process.env.BACKEND_URL}/api/v1/users/comments/${blogId}`, 'GET', 'Failed to fetch comments');
+      const response = await fetchData(`https://blog-application-sable.vercel.app/api/v1/users/comments/${blogId}`, 'GET', 'Failed to fetch comments');
       const sortedComments = response.comments || [];
       
       sortedComments.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
@@ -30,7 +30,7 @@ const Comments = ({ blogId }) => {
     }
 
     try {
-      const response = await fetch(`${process.env.BACKEND_URL}/api/v1/users/comments`, {
+      const response = await fetch(`https://blog-application-sable.vercel.app/api/v1/users/comments`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ blogId, comment: newComment }),

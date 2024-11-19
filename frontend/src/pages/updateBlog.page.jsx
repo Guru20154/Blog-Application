@@ -105,7 +105,7 @@ const UpdateBlog = () => {
 
     
         try {
-            const response = await fetch(`${process.env.BACKEND_URL}/api/v1/users/blogs/${id}`, {
+            const response = await fetch(`https://blog-application-sable.vercel.app/api/v1/users/blogs/${id}`, {
                 method: 'PUT',
                 body: blogData, 
                 credentials: 'include',

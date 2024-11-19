@@ -12,7 +12,7 @@ export const fetchData = async (url, method = 'GET', errorMessage = 'Request fai
 };
 
 export const deleteBlog = async (id) => {
-  const url = `${process.env.BACKEND_URL}/api/v1/users/blogs/${id}`;
+  const url = `https://blog-application-sable.vercel.app/api/v1/users/blogs/${id}`;
   const response = await fetchData(url, 'DELETE', 'Failed to delete blog');
   return response;
 };
