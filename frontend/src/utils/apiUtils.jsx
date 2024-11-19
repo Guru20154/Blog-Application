@@ -12,7 +12,7 @@ export const fetchData = async (url, method = 'GET', errorMessage = 'Request fai
 };
 
 export const deleteBlog = async (id) => {
-  const url = `http://localhost:8000/api/v1/users/blogs/${id}`;
+  const url = `${process.env.BACKEND_URL}/api/v1/users/blogs/${id}`;
   const response = await fetchData(url, 'DELETE', 'Failed to delete blog');
   return response;
 };

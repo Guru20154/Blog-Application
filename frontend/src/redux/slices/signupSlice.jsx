@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 export const signup = createAsyncThunk('auth/signup', async (formDataToSend, { rejectWithValue }) => {
   try {
-    const response = await fetch('http://localhost:8000/api/v1/users/register', {
+    const response = await fetch(`${process.env.BACKEND_URL}/api/v1/users/register`, {
       method: 'POST',
       body: formDataToSend,
     });

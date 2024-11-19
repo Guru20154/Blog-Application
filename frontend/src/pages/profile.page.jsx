@@ -24,10 +24,10 @@ const Profile = () => {
   useEffect(() => {
     const fetchDataAsync = async () => {
       try {
-        const userResponse = await fetchData('http://localhost:8000/api/v1/users/current-user', 'GET', 'Failed to fetch user details');
+        const userResponse = await fetchData(`${process.env.BACKEND_URL}/api/v1/users/current-user`, 'GET', 'Failed to fetch user details');
         setUserDetails(userResponse.data);
 
-        const blogsResponse = await fetchData('http://localhost:8000/api/v1/users/userBlogs', 'GET', 'Failed to fetch user blogs');
+        const blogsResponse = await fetchData(`${process.env.BACKEND_URL}/api/v1/users/userBlogs`, 'GET', 'Failed to fetch user blogs');
         setBlogs(blogsResponse.data);
       } catch (err) {
         setError(err.message);

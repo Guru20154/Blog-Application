@@ -21,7 +21,7 @@ const UpdateBlog = () => {
     useEffect(() => {
         const fetchBlogDetails = async () => {
             try {
-                const response = await fetch(`http://localhost:8000/api/v1/users/blogs/${id}`, {
+                const response = await fetch(`${process.env.BACKEND_URL}/api/v1/users/blogs/${id}`, {
                     method: 'GET',
                     credentials: 'include',
                 });
@@ -105,7 +105,7 @@ const UpdateBlog = () => {
 
     
         try {
-            const response = await fetch(`http://localhost:8000/api/v1/users/blogs/${id}`, {
+            const response = await fetch(`${process.env.BACKEND_URL}/api/v1/users/blogs/${id}`, {
                 method: 'PUT',
                 body: blogData, 
                 credentials: 'include',

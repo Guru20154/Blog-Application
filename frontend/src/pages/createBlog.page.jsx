@@ -59,7 +59,7 @@ const CreateBlog = () => {
     if (coverImage) blogData.append('coverImage', coverImage);
 
     try {
-      const response = await fetch('http://localhost:8000/api/v1/users/blogs', {
+      const response = await fetch(`${process.env.BACKEND_URL}/api/v1/users/blogs`, {
         method: 'POST',
         body: blogData,
         credentials: 'include',

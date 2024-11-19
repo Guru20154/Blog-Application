@@ -15,7 +15,7 @@ const BlogDetail = () => {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetchData(`http://localhost:8000/api/v1/users/blogs/${id}`, 'GET', 'Failed to fetch blog details');
+      const response = await fetchData(`${process.env.BACKEND_URL}/api/v1/users/blogs/${id}`, 'GET', 'Failed to fetch blog details');
       setBlog(response.blog);
     } catch (err) {
       setError(err.message);

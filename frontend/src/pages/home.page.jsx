@@ -28,7 +28,7 @@ const Home = () => {
     setLoading(true);
     setError(null);
     try {
-      const data = await fetchData(`http://localhost:8000/api/v1/users/blogs?page=${page}&limit=5`);
+      const data = await fetchData(`${process.env.BACKEND_URL}/api/v1/users/blogs?page=${page}&limit=5`);
       
       setBlogs((prev) => [...prev, ...data.blogs]);
       setHasMore(data.blogs.length > 0); 
