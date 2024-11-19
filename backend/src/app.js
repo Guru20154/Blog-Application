@@ -12,6 +12,7 @@ app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', 'https://blog-application-g3dv.vercel.app/');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    res.setHeader('Access-Control-Allow-Crendentials', true);
     next();
 });
   
