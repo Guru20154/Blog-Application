@@ -102,8 +102,9 @@ const loginUser = asyncHandler(async (req, res) => {
 
     const options = {
         httpOnly: true,
-        sameSite: 'lax',
+        sameSite: 'None',
         secure: process.env.NODE_ENV === 'production',
+        domain: "https://blog-application-g3dv.vercel.app/"
     }
 
     return res
@@ -137,8 +138,9 @@ const logoutUser = asyncHandler(async (req, res) => {
 
     const options = {
         httpOnly: true,
-        sameSite: 'lax',
+        sameSite: 'None',
         secure: process.env.NODE_ENV === 'production',
+        domain: "https://blog-application-g3dv.vercel.app/"
     }
 
     return res
@@ -170,8 +172,9 @@ const refreshAccessToken = asyncHandler(async (req, res) => {
 
         const options = {
             httpOnly: true,
-            sameSite: 'lax',
+            sameSite: 'None',
             secure: process.env.NODE_ENV === 'production',
+            domain: "https://blog-application-g3dv.vercel.app/"
         }
 
         const { accessToken, newRefreshToken } = await generateAccessAndRefreshTokens(user._id)
@@ -179,7 +182,7 @@ const refreshAccessToken = asyncHandler(async (req, res) => {
         return res
             .status(200)
             .cookie("accessToken", accessToken, options)
-            .cookie("refreshToken", newRefreshToken, opitons)
+            .cookie("refreshToken", newRefreshToken, options)
             .json(
                 new ApiResponse(
                     200,
