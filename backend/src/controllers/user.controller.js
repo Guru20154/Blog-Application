@@ -104,7 +104,7 @@ const loginUser = asyncHandler(async (req, res) => {
         httpOnly: true,
         sameSite: 'None',
         secure: process.env.NODE_ENV === 'production',
-        domain: "vercel.app"
+        domain: "blog-application-sable.vercel.app"
     }
 
     return res
@@ -140,7 +140,7 @@ const logoutUser = asyncHandler(async (req, res) => {
         httpOnly: true,
         sameSite: 'None',
         secure: process.env.NODE_ENV === 'production',
-        domain: "vercel.app"
+        domain: "blog-application-sable.vercel.app"
     }
 
     return res
@@ -174,7 +174,7 @@ const refreshAccessToken = asyncHandler(async (req, res) => {
             httpOnly: true,
             sameSite: 'None',
             secure: process.env.NODE_ENV === 'production',
-            domain: "vercel.app"
+            domain: "blog-application-sable.vercel.app"
         }
 
         const { accessToken, newRefreshToken } = await generateAccessAndRefreshTokens(user._id)
