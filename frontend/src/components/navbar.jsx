@@ -101,7 +101,7 @@ const Navbar = () => {
         >
           <Box
             sx={{
-              top: 88,
+              zIndex: 2000,
               width: 250,
               padding: 2,
               display: 'flex',
