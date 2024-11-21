@@ -1,7 +1,8 @@
 # Blog App
 
 A simple blog application where users can create, read, and comment on blogs. The app features a user authentication system and allows logged-in users to add and view comments for each blog post. This app is built with React.js for the frontend, Express.js for the backend, and MongoDB for storing blog data and user information.
-
+[Vercel Deployed Link](https://blog-application-g3dv.vercel.app/)
+[DataBase Model](https://dbdiagram.io/d/Blog-App-6732e95de9daa85aca1e647c)
 
 ## Main Page
 ![alt text](/Images/image-7.png)
