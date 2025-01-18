@@ -24,10 +24,10 @@ const Profile = () => {
   useEffect(() => {
     const fetchDataAsync = async () => {
       try {
-        const userResponse = await fetchData(`https://blog-application-sable.vercel.app/api/v1/users/current-user`, 'GET', 'Failed to fetch user details');
+        const userResponse = await fetchData(`https://blog-application-sable.vercel.app/api/v1/users/users/me`, 'GET', 'Failed to fetch user details');
         setUserDetails(userResponse.data);
 
-        const blogsResponse = await fetchData(`https://blog-application-sable.vercel.app/api/v1/users/userBlogs`, 'GET', 'Failed to fetch user blogs');
+        const blogsResponse = await fetchData(`https://blog-application-sable.vercel.app/api/v1/users/users/me/blogs`, 'GET', 'Failed to fetch user blogs');
         setBlogs(blogsResponse.data);
       } catch (err) {
         setError(err.message);

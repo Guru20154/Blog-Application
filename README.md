@@ -133,7 +133,7 @@ Explanation of environment variables:
 - **`POST /api/v1/users/refresh-token`**  
   Refresh access token using a valid refresh token.
 
-- **`GET /api/v1/users/current-user`**  
+- **`GET /api/v1/users/users/me`**  
   Get the current logged-in user's details (requires JWT authentication).
 
 ## Blog Routes
@@ -163,7 +163,7 @@ Explanation of environment variables:
 
 ## User Routes
 
-- **`GET /api/v1/users/userBlogs`**  
+- **`GET /api/v1/users/users/me/blogs`**  
   Get a list of blogs created by the current user (requires JWT authentication).
 
 ## Frontend Structure

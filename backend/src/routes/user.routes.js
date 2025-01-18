@@ -24,7 +24,7 @@ import { verifyjwt } from "../middlewares/auth.middleware.js";
 
 const router = Router()
 
-router.route('/register').post(
+router.route('/users').post(
     upload.fields([
         {
             name: "avatar",
@@ -50,9 +50,9 @@ router.route("/logout").post(verifyjwt, logoutUser)
 
 router.route("/refresh-token").post(refreshAccessToken)
 
-router.route("/current-user").get(verifyjwt,getCurrentUser)
+router.route("/users/me").get(verifyjwt,getCurrentUser)
 
-router.route("/userBlogs").get(verifyjwt, userBlogs)
+router.route("/users/me/blogs").get(verifyjwt, userBlogs)
 
 router.route("/blogs/:id").get(blogDetails)
 

@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 export const signup = createAsyncThunk('auth/signup', async (formDataToSend, { rejectWithValue }) => {
   try {
-    const response = await fetch(`https://blog-application-sable.vercel.app/api/v1/users/register`, {
+    const response = await fetch(`https://blog-application-sable.vercel.app/api/v1/users/users`, {
       method: 'POST',
       body: formDataToSend,
     });
